@@ -1,0 +1,908 @@
+@import url('https://fonts.googleapis.com/css?family=Nova+Round');
+@import 'pure-min.css';
+@import 'grids-responsive-min.css';
+@import url('_variables.less');
+@import url('_mixins.less');
+html, body{
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+.loader{
+	position : fixed;
+	z-index: 9999;
+	background : url(../images/loader.gif) 50% 50% no-repeat;
+	background-color: white;
+	top : 0px;
+	left : 0px;
+	height : 100%;
+	width : 100%;
+	cursor : wait;
+	display: none;
+}
+.white{
+	position : fixed;
+	z-index: 9998;
+	width: 100%;
+	height: 100%;
+	background-color: white;
+}
+//header
+header {
+	visibility: block;
+	position: fixed;
+	z-index: 999;
+}
+.menutext{
+	display: none;
+	a{
+		padding: 0;
+	}
+}
+header{
+	background-image: url(../images/fond_header_mobile.png);
+	background-repeat: no-repeat;
+	height: 70px;
+	opacity: 0.95;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	@media @laptop{
+	background-image: url(../images/header_fond.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 170px;
+	opacity: 0.95;
+	width: 100%;
+	position: relative;
+
+	}
+}
+//fond
+body{
+	background-color: rgba(224,224,224 ,1);
+	// background-image: url(../images/fond_smartphone.jpg);
+	// background-attachment: fixed;
+	// background-size: cover;
+	// background-repeat: no-repeat;
+	
+	@media @laptop{
+	background-image: url(../images/white_background.jpg);
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	}
+
+}
+//test menu hamburger
+.logo {
+	background-image: url(../images/fond_header_mobile.png);
+}
+.menu-toggle {
+  position: absolute;
+  padding: 0.8em;
+  top: 1em;
+  right: .5em;
+  cursor: pointer;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  display: block;
+  background: #EBEBD3;
+  height: 3px;
+  width: 2em;
+  border-radius: 3px;
+  -webkit-transition: all ease-in-out 350ms;
+  transition: all ease-in-out 350ms;
+}
+
+.hamburger::before {
+  -webkit-transform: translateY(-7px);
+          transform: translateY(-7px);
+}
+
+.hamburger::after {
+  -webkit-transform: translateY(4px);
+          transform: translateY(4px);
+}
+
+.open .hamburger {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.open .hamburger::before {
+  display: none;
+}
+
+.open .hamburger::after {
+  -webkit-transform: translateY(-1px) rotate(-90deg);
+          transform: translateY(-1px) rotate(-90deg);
+}
+nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+nav ul.opening {
+    display: block;
+    background-image: url(../images/black.jpg);
+    animation: bounceInDown 1s;
+
+
+}
+
+nav li {
+  border-bottom: 1px solid #f6f4e2;
+  @media @laptop{
+  	border-bottom: none;
+  }
+}
+nav a {
+  color: #EBEBD3;
+  display: block;
+  padding: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: Nova Round;
+  @media @laptop{
+  	background-color: transparent;
+  }
+}
+
+nav a:hover,
+nav a:focus {
+  background: rgba(255,179,0 ,0.6);
+  @media @laptop{ 
+  background: transparent;
+  color: rgba(251,192,45 ,1);
+   }
+}
+.wrapper{
+	@media @laptop{
+		display: none;
+	}
+}
+nav ul li a img{
+	width: 30px;
+	padding-right: 20px;
+}
+//fin menu hamburger
+
+//menu volant
+.menu_volant{
+	display: none;
+	position: fixed;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    top: 0;
+
+    nav ul li a {
+    	padding: 0;
+    	font-size: 14px;
+    }
+    nav{
+    	padding: 15px;
+    	background-image: url(../images/menu_volant.png);
+    	background-size: cover;
+    	background-repeat: no-repeat;
+    	background-position: center;
+
+
+    }
+    .closeMenu{
+	position: fixed;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 10px;
+    top: 6%;
+    .closeButton{
+    	width: 10px;
+    	height: 10px;
+    	background-position: center;
+    	background-image: url(../images/close_menu.png);
+    	background-size: cover;
+
+    }
+
+    }
+}
+
+//fin du menu volant
+//logo
+#logo{
+	display: none;
+	@media @laptop{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		img{
+		width: -webkit-fill-available;
+   		max-width: 2000px;
+		}
+
+	}
+}
+#logoseul{
+	display: flex;
+	margin-top: 150px;
+	justify-content: center;
+}
+#logoseul img{
+	max-width: 1024px;
+	height: 400px;
+	width: auto;
+	z-index: 1;
+	margin-top: 0;
+}
+//footer
+#textebas{
+	display: none;	
+	@media @laptop{
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+   }
+}
+#textebasmobile{
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+}
+#emailseul{
+	transition: transform;
+	transition-delay: 0.1s;
+	transition-duration: 0.5s;
+	margin: 10px;
+	height: 22px;
+}
+#emailseul:hover{
+	transform: scale(1.3);
+}
+#phoneseul{
+	transition: transform;
+	transition-delay: 0.1s;
+	transition-duration: 0.5s;
+	margin: 10px;
+	height: 22px;
+}
+#phoneseul:hover{
+	transform: scale(1.3);
+}
+#instagramseul{
+	transition: transform;
+	transition-delay: 0.1s;
+	transition-duration: 0.5s;
+	margin: 10px;
+	height: 22px;
+	width: 22px;
+}
+#instagramseul:hover{
+	transform: scale(1.3);
+}
+#facebookseul{
+	transition: transform;
+	transition-delay: 0.1s;
+	transition-duration: 0.5s;
+	margin: 10px;
+	height: 22px;
+	width: 22px;
+}
+#facebookseul:hover{
+	transform: scale(1.3);
+}
+footer{
+	background-image: url(../images/fond_footer.png);
+	background-position: bottom;
+	background-repeat: no-repeat; 
+	background-size: cover;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	z-index: 900;
+	height: 100px;
+	// @media @laptop{
+	// height: 85px;
+	// }
+
+}
+/*ici commence le CSS de la page "A propos"*/
+#a_propos{
+	height: auto;
+	margin-top: 175px;
+}
+.imgapropos{
+	background-image: url(../images/apropos.png);
+	height: 200px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.info_bulle{	
+	background-image: url(../images/texte1_a_propos_bis.png);
+	height: 500px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 30px;
+}
+.photo_moi{	
+	visibility: hidden;	
+	@media @laptop{
+	background-image: url(../images/photo_moi.png);
+	height: 150px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 450px;
+    position: absolute;
+	}
+
+}
+.info_bulle2{	
+	background-image: url(../images/texte2_a_propos.png);
+	height: 500px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 30px;
+}
+
+/*ici commence le CSS de la page "Contact"*/
+.logocontact{
+	background-image: url(../images/contact.png);
+	height: 200px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+form{
+	color: rgba(189,189,189 ,1);	
+	margin-bottom: 20px;
+	margin-left: 40px;
+	margin-right: 40px;
+	width: 100%;
+}
+input{
+	font-family: Nova round;
+	border-radius: 20px;
+	background:rgba(250,250,250 ,0.8);
+	padding: 10px;
+}
+label{
+	font-family: Nova round;
+	font-size: 33px;
+	color: rgba(117,117,117 ,1);
+}
+textarea{
+	font-family: Nova round;
+	font-size: 16px;
+	color: rgba(117,117,117 ,1);
+	border-radius: 20px;
+	width: 75%;
+	opacity: 0.8;
+}
+#submit{
+	background-color: #d49308;
+	border: none;
+	border-radius: 15px;
+	width: 110px;
+	font-family: Nova round;
+	font-size: 22px;
+	color: white;   
+	 margin: auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+}
+#submit:hover{
+	transform: all;
+    	animation: rubberBand 2s infinite;
+    }
+#result{
+	text-align: center;
+	font-family: Nova round;
+
+}
+.confidential{
+	font-family: Nova Round;
+	color: rgba(117,117,117 ,1);
+	span{
+		color: black;
+	}
+}
+
+/*Ici commence le CSS de la page "CV"*/
+
+p{
+	font-family: Nova round;
+	color: rgba(158,158,158 ,1);
+	font-size: 0.8em;
+}
+h1{
+	font-family: Nova round;
+	color: rgba(97,97,97 ,1);
+	font-size: 1.4em;
+}
+h2{
+	font-family: Nova round;
+	color: rgba(97,97,97 ,1);
+	font-size: 1em;
+}
+h3{
+	font-family: Nova round;
+	color: rgba(97,97,97 ,1);
+	font-size: 0.9em;
+}
+#cv{
+	margin-top: 150px;
+	padding: 20px;
+}
+.head_cv{
+	background-image: url(../images/cv.png);
+	height: 200px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin: auto;
+}
+.name{
+	background-image: url(../images/cv_head.png);
+	height: 100px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 30px;
+    margin: auto;
+}
+.hobbies{
+	background-image: url(../images/hobbies.png);
+	height: 60px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 30px;
+}
+.competences{
+	background-image: url(../images/competences.png);
+	height: 450px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 30px;
+    @media @laptop{
+    	height: 400px;
+    }
+}
+.scaleUp:hover{
+	transition: transform;
+	transition-delay: 0.1s;
+	transition-duration: 1s;
+	transform: scale(1.3);
+}
+.scaleUpSmall:hover{
+	transition: transform;
+	transition-delay: 0.1s;
+	transition-duration: 1s;
+	transform: scale(1.1);
+	@media @laptop{
+	transition: transform;
+	transition-delay: 0.1s;
+	transition-duration: 1s;
+	transform: scale(1.1);
+	}
+}
+.experiences{
+	background-image: url(../images/experiences.png);
+	height: 450px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 30px;
+        @media @laptop{
+    	height: 400px;
+    }
+}
+.formation{
+	background-image: url(../images/formation.png);
+	height: 450px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 30px;
+    	@media @laptop{
+    	height: 400px;
+    }
+}
+.bloccontact{
+	background-image: url(../images/contactbloc.png);
+	height: 300px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+        @media @laptop{
+    	height: 300px;
+    	background-position: right;
+        background-size: contain;
+  		background-repeat: no-repeat;
+    }
+}
+.cv_pdf{
+	background-image: url(../images/cv_pdf.png);
+	height: 200px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 50px;
+        @media @laptop{
+    	height: 200px;
+    }
+
+}
+.reseaux{
+	background-image: url(../images/social_media.png);
+	height: 200px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+        @media @laptop{
+    	height: 200px;
+    }
+}
+.divers{
+	background-image: url(../images/divers.png);
+	height: 250px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+        @media @laptop{
+    	height: 300px;
+    	    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+    }
+}
+.citation{
+	background-image: url(../images/citation.png);
+	height: 30px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 30px;
+}
+.up{
+	position: fixed;
+	display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 30px;
+    right: 0;
+    height: 20px;
+    top: 95%;
+    z-index: 999;
+    display: none;
+    .imageUp{
+    background-image: url(../images/up_button.png);
+	background-repeat:no-repeat;
+	background-size: cover;
+	background-position:center;
+	width: 20px;
+    height: 20px;
+    margin-right: 50px;
+
+    }
+
+}
+/*mentions legales et politique de confidentialité*/
+.mentions_legales{
+	display: flex;
+	position: relative;
+	justify-content: center;
+	margin-bottom: 90px;
+	width: 100%;
+	@media @laptop{
+		margin-bottom: 80px;
+	}
+	
+}
+.pop_up_mentions{
+	display: none;
+	position: fixed;
+	z-index: 99999;
+	flex-direction: column;
+	background-color:rgba(224,224,224 ,1) ;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: auto;
+	padding: 30px;
+	height: 75%;
+
+}
+.pop_up_conf{
+	display: none;
+	position: fixed;
+	z-index: 99998;
+	flex-direction: column;
+	background-color:rgba(224,224,224 ,1) ;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: auto;
+	padding: 50px;
+	height: 75%;
+
+}
+.fond_pop_up{
+	display: none;
+	width: 100%;
+	height: 100vh;
+	background-color:rgba(117,117,117 ,0.8);
+	position: fixed;
+	z-index: 99997;
+	top: 100%;
+    left: 100%;
+    transform: translate(-100%, -100%);
+
+}
+.click_pop {
+	cursor: pointer;
+}
+.click_pop_2{
+	cursor: pointer;
+}
+.cancel{
+	width: 15px;
+	height: 15px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url(../images/cancel.png);
+	cursor: pointer;
+}
+
+/*Configuration pour ecran de PC normaux*/
+nav ul li{
+	@media @laptop{
+	display: inline;
+	font-family: Novamono;
+	font-size: 20px;
+	color:#FBC02D;
+	text-align: right;
+	text-transform:uppercase;}
+	
+}
+
+.menutext{
+	@media @laptop{
+	display: inline;
+	font-family: Nova round;
+	font-size: 20px;
+	font-style: bold;
+	color:#9E9E9E;
+	text-align: right;
+	list-style-type: none;
+	text-decoration: none;
+	margin-top: 25px;
+	margin-right: 15px;
+	z-index: 999;
+	}
+	
+}
+
+nav{
+	@media @laptop{
+	text-align: right;
+	word-spacing: 15px;
+	padding-top: 35px;	
+	}
+
+}
+#logoseul{
+	@media @laptop{
+		display: none;}
+
+}
+#email{@media @laptop{
+	transition: transform;
+	transition-delay: 0.1s;
+	transition-duration: 1s;
+	margin: 10px;
+	height: 22px;
+}
+
+}
+#email:hover{
+	@media @laptop{
+	transform: scale(1.2);	
+	}
+
+}
+#phone{
+	@media @laptop{
+	transition: transform;
+	transition-delay: 0.1s;
+	transition-duration: 1s;
+	margin: 10px;
+	height: 22px;		
+	}
+}
+#phone:hover{
+	@media @laptop{
+	transform: scale(1.2);		
+	}
+}
+#instagram{
+	@media @laptop{
+	transition: transform;
+	transition-delay: 0.1s;
+	transition-duration: 1s;
+	margin: 10px;
+	height: 22px;		
+	}
+}
+#instagram:hover{
+	@media @laptop{
+	transform: scale(1.2);		
+	}
+
+}
+#facebook{
+	@media @laptop{
+	transition: transform;
+	transition-delay: 0.1s;
+	transition-duration: 1s;
+	margin: 10px;
+	height: 22px;		
+	}
+}
+#facebook:hover{
+	@media @laptop{
+	transform: scale(1.2);		
+	}
+}
+#textebasmobile{
+	@media @laptop{
+	display: none;		
+	}
+}
+
+//test organite
+#organite {
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+  z-index: -10;
+}
+
+.organite {
+  width: 40px;
+  height: 40px;
+  background-image:url(../images/octo.png)!important;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: -1 !important;
+
+}
+
+.geneA_1 {
+  width: 300px;
+  height: 300px;
+}
+
+.geneA_2 {
+  width: 20px;
+  height: 20px;
+}
+
+.geneA_3 {
+  width: 100px;
+  height: 100px;
+}
+
+.geneA_4 {
+  width: 150px;
+  height: 150px;
+}
+
+.geneA_5 {
+  width: 50px;
+  height: 50px;
+}
+
+.geneC_1 {
+  opacity: 0.9;
+}
+
+.geneC_2 {
+  opacity: 0.6;
+}
+
+.geneC_3 {
+  opacity: 1;
+}
+
+.geneC_4 {
+  opacity: 0.3;
+}
+
+.geneC_5 {
+  opacity: 0.2;
+}
+
+.geneC_1:hover, .geneC_2:hover, .geneC_3:hover, .geneC_4:hover, .geneC_5:hover {
+  opacity: 0.8;
+}
+
+.core {
+  position: absolute;
+  z-index: -1 !important;
+  opacity: 1;
+}
+
+.core1 {
+  width: 100%;
+  height: 100%;
+  margin: 0%;
+  opacity: 1;
+}
+
+.core2 {
+  width: 40%;
+  height: 40%;
+  margin: 30%;
+  opacity: 1;
+  // background: #c2d1d6;
+}
+
+.core3 {
+  width: 20%;
+  height: 20%;
+  margin: 40%;
+}
+
+.core4 {
+  width: 80%;
+  height: 80%;
+  margin: 10%;
+}
+
+.core5 {
+  width: 60%;
+  height: 60%;
+  margin: 20%;
+  // background: white;
+}
+//fin organite

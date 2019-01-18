@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Aurélien Frois</title>
+	<meta name="description" content="Site web Aurelien Frois"> 
+	<meta name="keywords" content="developpeur, web">
+	<link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.visible.min.js"></script>
+	<script src="https://gitcdn.xyz/repo/thesmart/jquery-scrollspy/0.1.3/scrollspy.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+
+
+</head>
+<!--  test organite particules qui bougent -->
+  <div id="organite">
+<!--  test organite particules qui bougent -->
+<body id="top">
+<header>
+	<nav class=" wow flipInX" data-wow-duration="1s" data-wow-delay="0.5s">
+			<ul class="menutext">
+				<li><a class="menutext"href="#top">Accueil</a></li>
+				<li><a class="menutext"href="#a_propos">A propos</a></li>
+				<li><a class="menutext"href="#cv">CV</a></li>
+				<li><a class="menutext"href="#contact">Contact</a></li>
+			</ul>		
+	</nav>
+    <div class="wrapper">
+        <nav class="site-nav">
+            <div class="menu-toggle">
+              <div class="hamburger"></div>
+            </div>
+            <ul class="open desktop">
+                <li><a href="#top"><img src="images/home.png"></i>Accueil</a></li>
+                <li><a href="#a_propos"><img src="images/megaphone.png">A propos</a></li>
+                <li><a href="#cv"><img src="images/approved.png">CV</a></li>
+                <li><a href="#contact"><img src="images/letter.png">Contact</a></li>
+                
+            </ul>
+        </nav>
+    </div>
+
+
+    <div class="menu_volant">
+    		<nav>
+			<ul class="menutext">
+				<li><a class="menutext"href="#top">Accueil</a></li>
+				<li><a class="menutext"href="#a_propos">A propos</a></li>
+				<li><a class="menutext"href="#cv">CV</a></li>
+				<li><a class="menutext"href="#contact">Contact</a></li>
+			</ul>		
+	</nav>
+
+    <div class="closeMenu wow bounce">
+		<div class="closeButton"></div>
+	</div>
+    </div>
+
+
+			
+</header>
+<main>
+	<!--loader-->
+	<div class="loader white"></div>
+	<!--loader-->
+	<section id="accueil" class="pure-g">
+		<div id="logo" class="pure-u-1"><img src="images/logositeweb.png"></div>
+			
+		<div id="logoseul" class="pure-u-1"><img src="images/logoseul.png"></div>
+	</section>
+
+	<section id="a_propos" class="pure-g">
+		<div class="imgapropos pure-u-1">
+		</div>
+
+		<div class="photo_moi pure-u-1 pure-u-lg-1 wow flipInY" data-wow-duration="2s" data-wow-delay="1s">
+		</div>
+
+		<div class="info_bulle scaleUpSmall pure-u-1 pure-u-lg-1-2 wow bounceInLeft" data-wow-duration="2s" data-wow-delay="0.5s">
+		</div>
+
+
+
+		<div class="info_bulle2 scaleUpSmall pure-u-1 pure-u-lg-1-2 wow bounceInRight" data-wow-duration="2s" data-wow-delay="0.5s">
+		</div>
+
+	</section>
+
+	<section id="cv" class="pure-g">
+		<div class="head_cv pure-u-1">
+		</div>
+
+		<div class="name pure-u-1">
+		</div>
+
+		<div class="hobbies pure-u-1">
+		</div>
+
+		<div class="competences scaleUp pure-u-1 pure-u-lg-1-3 wow bounceInLeft" data-wow-duration="1.5s" data-wow-delay="1.3s">
+		
+		</div>
+		<div class="experiences scaleUp pure-u-1 pure-u-lg-1-3 wow bounceIn" data-wow-duration="1.5s" data-wow-delay="1.3s">
+		
+		</div>
+		<div class="formation scaleUp pure-u-1 pure-u-lg-1-3 wow bounceInRight" data-wow-duration="1.5s" data-wow-delay="1.3s">
+	
+		</div>
+		<div class="bloccontact scaleUp pure-u-1 pure-u-lg-1-3 wow bounceInLeft" data-wow-duration="1.5s" data-wow-delay="2s">
+	
+		</div>
+
+		<a href="media/cv_aurelien_frois.pdf" download="cv_aurelien_frois.pdf" class="cv_pdf scaleUp pure-u-1 pure-u-lg-1-3 wow flipInY" data-wow-duration="1.5s" data-wow-delay="1.3s">
+		<div></div>
+		</a>
+
+		<div class="divers scaleUp pure-u-1 pure-u-lg-1-3 wow bounceInRight" data-wow-duration="1.5s" data-wow-delay="2s">
+		
+		</div>
+
+		<div class="reseaux scaleUp pure-u-1 pure-u-lg-1 wow flipInY" data-wow-duration="1.5s" data-wow-delay="1.7s"">
+			
+		</div>
+
+		<div class="citation pure-u-1">
+		
+		</div>
+
+		
+	</section>
+
+	
+			<section id="contact" class="contact pure-g">
+				<div id="logocontact" class="logocontact pure-u-1">
+					
+				</div>
+				<form id="form1" class="pure-g" method="post" action="fonction/envoi.php" onsubmit="return veriform1()">
+						<div class="nom pure-u-1-2 wow bounceIn">
+							<label class="pure-u-1">Nom*:</label>
+								<input id="nom" class="pure-u-1" type="text" name="nom" placeholder="Entrez votre nom">	
+						</div>
+						<div class="prenom pure-u-1-2 wow bounceIn">
+							<label class="pure-u-1">Prénom*:</label>
+								<input id="prenom" class="pure-u-1" type="text" name="prenom" placeholder="Entrez votre prénom">	
+						</div>		
+						<div class="email pure-u-1-1 wow bounceIn">
+							<label class="pure-u-1">E-mail*:</label>
+								<input id="emailform" class="pure-u-1" type="mail" name="adressemail" placeholder="Entrez votre E-mail">	
+						</div>	
+						<div class="message pure-u-1 wow bounceIn">
+							<label class="pure-u-1">Message*:</label>
+								<textarea id="message" class="pure-u-1 wow bounceIn" cols="45" rows="15" placeholder="Entrez votre message" name="message">
+								</textarea>
+						</div>
+
+						<div class="pure-u-1 confidential">
+							<input type="checkbox" name="confidential" id="checkbox">
+							J'ai lu et j'accepte la <span class="click_pop_2">politique de confidentialité.</span> 
+						</div>
+
+					<input name="sendbutton" id="submit" type="submit" value="Envoi">
+					<div class="pure-u-1" id="result"></div>
+					
+				</form>	
+			</section>	
+			<div class="pop_up_conf">
+				<div class="cancel"></div>
+				<p>« Les informations recueillies vous concernant font l’objet d’un traitement destiné à : Aurélien Frois.<br>
+
+				18 rue du pont de l'agage
+				63118 CEBAZAT
+				France
+				06 27 16 20 85
+				Email : aurelien.frois@gmail.com <br>
+
+				Pour la finalité suivante : receuil de renseignements à titre informatif.<br>
+
+				Le destinataire de ces données est : Aurélien Frois<br>
+
+				La durée de conversation des données est illimitée.<br>
+
+				Vous bénéficiez d’un droit d’accès, de rectification, de portabilité, d’effacement de celles-ci ou une limitation du traitement.<br>
+
+				Vous pouvez vous opposer au traitement des données vous concernant et disposez du droit de retirer votre consentement à tout moment en vous adressant à : aurelien.frois@gmail.com<br>
+
+				Vous avez la possibilité d’introduire une réclamation auprès d’une autorité de contrôle. »</p>
+			</div>
+			<div class="fond_pop_up"></div>
+			<div class="up">
+				<a href="#top">
+					<div class="imageUp">
+					</div>
+				</a>
+				
+			</div>
+
+			<div class="mentions_legales">
+				<p>2019 Tout droits réservés Aurélien Frois / 
+					<span class="click_pop"> Mentions légales</span>
+				</p>
+				<div class="pop_up_mentions">
+					<div class="cancel"></div>
+
+<h2>Informations légales</h2>
+<h3>1. Présentation du site.</h3>
+<p>En vertu de l'article 6 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique, il est précisé aux utilisateurs du site <a href="http://www.aurelien-frois.fr/">www.aurelien-frois.fr</a> l'identité des différents intervenants dans le cadre de sa réalisation et de son suivi :</p>
+<p><strong>Propriétaire</strong> : Aurélien Frois –  – 18 rue du pont de l'agage<br />
+<strong>Créateur</strong>  : <a href="http://www.aurelien-frois.fr">Aurélien Frois</a><br />
+<strong>Responsable publication</strong> : Aurélien Frois – aurelien.frois@gmail.com<br />
+Le responsable publication est une personne physique ou une personne morale.<br />
+<strong>Webmaster</strong> : Aurélien Frois – aurelien.frois@gmail.com<br />
+<strong>Hébergeur</strong> : ionos – Montabaur, Allemagne<br />
+<h3>2. Conditions générales d’utilisation du site et des services proposés.</h3>
+<p>L’utilisation du site <a href="http://www.aurelien-frois.fr/">www.aurelien-frois.fr</a> implique l’acceptation pleine et entière des conditions générales d’utilisation ci-après décrites. Ces conditions d’utilisation sont susceptibles d’être modifiées ou complétées à tout moment, les utilisateurs du site <a href="http://www.aurelien-frois.fr/">www.aurelien-frois.fr</a> sont donc invités à les consulter de manière régulière.</p>
+<p>Ce site est normalement accessible à tout moment aux utilisateurs. Une interruption pour raison de maintenance technique peut être toutefois décidée par Aurélien Frois, qui s’efforcera alors de communiquer préalablement aux utilisateurs les dates et heures de l’intervention.</p>
+<p>Le site <a href="http://www.aurelien-frois.fr/">www.aurelien-frois.fr</a> est mis à jour régulièrement par Aurélien Frois. De la même façon, les mentions légales peuvent être modifiées à tout moment : elles s’imposent néanmoins à l’utilisateur qui est invité à s’y référer le plus souvent possible afin d’en prendre connaissance.</p>
+<h3>3. Description des services fournis.</h3>
+<p>Le site <a href="http://www.aurelien-frois.fr/">www.aurelien-frois.fr</a> a pour objet de fournir une information concernant l’ensemble des activités de la société.</p>
+<p>Aurélien Frois s’efforce de fournir sur le site <a href="http://www.aurelien-frois.fr/">www.aurelien-frois.fr</a> des informations aussi précises que possible. Toutefois, il ne pourra être tenue responsable des omissions, des inexactitudes et des carences dans la mise à jour, qu’elles soient de son fait ou du fait des tiers partenaires qui lui fournissent ces informations.</p>
+<p>Tous les informations indiquées sur le site <a href="http://www.aurelien-frois.fr/">www.aurelien-frois.fr</a> sont données à titre indicatif, et sont susceptibles d’évoluer. Par ailleurs, les renseignements figurant sur le site <a href="http://www.aurelien-frois.fr/">www.aurelien-frois.fr</a> ne sont pas exhaustifs. Ils sont donnés sous réserve de modifications ayant été apportées depuis leur mise en ligne.</p>
+<h3>4. Limitations contractuelles sur les données techniques.</h3>
+<p>Le site utilise la technologie JavaScript.</p>
+<p>Le site Internet ne pourra être tenu responsable de dommages matériels liés à l’utilisation du site. De plus, l’utilisateur du site s’engage à accéder au site en utilisant un matériel récent, ne contenant pas de virus et avec un navigateur de dernière génération mis-à-jour</p>
+<h3>5. Propriété intellectuelle et contrefaçons.</h3>
+<p>Toute reproduction, représentation, modification, publication, adaptation de tout ou partie des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite, sauf autorisation écrite préalable de : Aurélien Frois.</p>
+<p>Toute exploitation non autorisée du site ou de l’un quelconque des éléments qu’il contient sera considérée comme constitutive d’une contrefaçon et poursuivie conformément aux dispositions des articles L.335-2 et suivants du Code de Propriété Intellectuelle.</p>
+<h3>6. Limitations de responsabilité.</h3>
+<p>Aurélien Frois ne pourra être tenue responsable des dommages directs et indirects causés au matériel de l’utilisateur, lors de l’accès au site www.aurelien-frois.fr, et résultant soit de l’utilisation d’un matériel ne répondant pas aux spécifications indiquées au point 4, soit de l’apparition d’un bug ou d’une incompatibilité.</p>
+<p>Aurélien Frois ne pourra également être tenue responsable des dommages indirects (tels par exemple qu’une perte de marché ou perte d’une chance) consécutifs à l’utilisation du site <a href="http://www.aurelien-frois.fr/">www.aurelien-frois.fr</a>.</p>
+<p>Des espaces interactifs (possibilité de poser des questions dans l’espace contact) sont à la disposition des utilisateurs. Aurélien Frois se réserve le droit de supprimer, sans mise en demeure préalable, tout contenu déposé dans cet espace qui contreviendrait à la législation applicable en France, en particulier aux dispositions relatives à la protection des données. Le cas échéant, Aurélien Frois se réserve également la possibilité de mettre en cause la responsabilité civile et/ou pénale de l’utilisateur, notamment en cas de message à caractère raciste, injurieux, diffamant, ou pornographique, quel que soit le support utilisé (texte, photographie…).</p>
+<h3>7. Gestion des données personnelles.</h3>
+<p>En France, les données personnelles sont notamment protégées par la loi n° 78-87 du 6 janvier 1978, la loi n° 2004-801 du 6 août 2004, l'article L. 226-13 du Code pénal et la Directive Européenne du 24 octobre 1995.</p>
+<p>A l'occasion de l'utilisation du site <a href="http://www.aurelien-frois.fr/">www.aurelien-frois.fr</a>, peuvent êtres recueillies : l'URL des liens par l'intermédiaire desquels l'utilisateur a accédé au site <a href="http://www.aurelien-frois.fr/">www.aurelien-frois.fr</a>, le fournisseur d'accès de l'utilisateur, l'adresse de protocole Internet (IP) de l'utilisateur.</p>
+<p> En tout état de cause Aurélien Frois ne collecte des informations personnelles relatives à l'utilisateur que pour le besoin de certains services proposés par le site <a href="http://www.aurelien-frois.fr/">www.aurelien-frois.fr</a>. L'utilisateur fournit ces informations en toute connaissance de cause, notamment lorsqu'il procède par lui-même à leur saisie. Il est alors précisé à l'utilisateur du site <a href="http://www.aurelien-frois.fr/">www.aurelien-frois.fr</a> l’obligation ou non de fournir ces informations.</p>
+<p>Conformément aux dispositions des articles 38 et suivants de la loi 78-17 du 6 janvier 1978 relative à l’informatique, aux fichiers et aux libertés, tout utilisateur dispose d’un droit d’accès, de rectification et d’opposition aux données personnelles le concernant, en effectuant sa demande écrite et signée, accompagnée d’une copie du titre d’identité avec signature du titulaire de la pièce, en précisant l’adresse à laquelle la réponse doit être envoyée.</p>
+<p>Aucune information personnelle de l'utilisateur du site <a href="http://www.aurelien-frois.fr/">www.aurelien-frois.fr</a> n'est publiée à l'insu de l'utilisateur, échangée, transférée, cédée ou vendue sur un support quelconque à des tiers. Seule l'hypothèse du rachat de Aurélien Frois et de ses droits permettrait la transmission des dites informations à l'éventuel acquéreur qui serait à son tour tenu de la même obligation de conservation et de modification des données vis à vis de l'utilisateur du site <a href="http://www.aurelien-frois.fr/">www.aurelien-frois.fr</a>.</p>
+<p>Le site n'est pas déclaré à la CNIL car il ne recueille pas d'informations personnelles. .</p>
+<p>Les bases de données sont protégées par les dispositions de la loi du 1er juillet 1998 transposant la directive 96/9 du 11 mars 1996 relative à la protection juridique des bases de données.</p>
+<h3>8. Liens hypertextes et cookies.</h3>
+<p>Le site <a href="http://www.aurelien-frois.fr/">www.aurelien-frois.fr</a> contient un certain nombre de liens hypertextes vers d’autres sites, mis en place avec l’autorisation de Aurélien Frois. Cependant, Aurélien Frois n’a pas la possibilité de vérifier le contenu des sites ainsi visités, et n’assumera en conséquence aucune responsabilité de ce fait.</p>
+<p>La navigation sur le site <a href="http://www.aurelien-frois.fr/">www.aurelien-frois.fr</a> est susceptible de provoquer l’installation de cookie(s) sur l’ordinateur de l’utilisateur. Un cookie est un fichier de petite taille, qui ne permet pas l’identification de l’utilisateur, mais qui enregistre des informations relatives à la navigation d’un ordinateur sur un site. Les données ainsi obtenues visent à faciliter la navigation ultérieure sur le site, et ont également vocation à permettre diverses mesures de fréquentation.</p>
+<p>Le refus d’installation d’un cookie peut entraîner l’impossibilité d’accéder à certains services. L’utilisateur peut toutefois configurer son ordinateur de la manière suivante, pour refuser l’installation des cookies :</p>
+<p>Sous Internet Explorer : onglet outil (pictogramme en forme de rouage en haut a droite) / options internet. Cliquez sur Confidentialité et choisissez Bloquer tous les cookies. Validez sur Ok.</p>
+<p>Sous Firefox : en haut de la fenêtre du navigateur, cliquez sur le bouton Firefox, puis aller dans l'onglet Options. Cliquer sur l'onglet Vie privée.
+  Paramétrez les Règles de conservation sur :  utiliser les paramètres personnalisés pour l'historique. Enfin décochez-la pour  désactiver les cookies.</p>
+<p>Sous Safari : Cliquez en haut à droite du navigateur sur le pictogramme de menu (symbolisé par un rouage). Sélectionnez Paramètres. Cliquez sur Afficher les paramètres avancés. Dans la section "Confidentialité", cliquez sur Paramètres de contenu. Dans la section "Cookies", vous pouvez bloquer les cookies.</p>
+<p>Sous Chrome : Cliquez en haut à droite du navigateur sur le pictogramme de menu (symbolisé par trois lignes horizontales). Sélectionnez Paramètres. Cliquez sur Afficher les paramètres avancés. Dans la section "Confidentialité", cliquez sur préférences.  Dans l'onglet "Confidentialité", vous pouvez bloquer les cookies.</p>
+
+<h3>9. Droit applicable et attribution de juridiction.</h3>
+<p>Tout litige en relation avec l’utilisation du site <a href="http://www.aurelien-frois.fr/">www.aurelien-frois.fr</a> est soumis au droit français. Il est fait attribution exclusive de juridiction aux tribunaux compétents de Paris.</p>
+<h3>10. Les principales lois concernées.</h3>
+<p>Loi n° 78-17 du 6 janvier 1978, notamment modifiée par la loi n° 2004-801 du 6 août 2004 relative à l'informatique, aux fichiers et aux libertés.</p>
+<p> Loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique.</p>
+<h3>11. Lexique.</h3>
+<p>Utilisateur : Internaute se connectant, utilisant le site susnommé.</p>
+<p>Informations personnelles : « les informations qui permettent, sous quelque forme que ce soit, directement ou non, l'identification des personnes physiques auxquelles elles s'appliquent » (article 4 de la loi n° 78-17 du 6 janvier 1978).</p>
+				</div>
+			</div>
+		 
+</main>
+<footer>
+			<div id="textebas">
+				<a href="#contact"><img id="email" src="images/mail.png"></a>
+				<a href="#contact"><img id="phone" src="images/phone.png"></a>
+				<a href="http://www.instagimg.com/user/freudpassion/198917665"><img id="instagram" src="images/instagram.png"></a>
+				<a href="https://fr-fr.facebook.com/aurelien.frois"><img id="facebook" src="images/facebook.png"></a>
+				
+			</div>
+			<div id="textebasmobile">
+				<a href="#contact"><img id="emailseul" src="images/mailseul.png"></a>
+				<a href="#contact"><img id="phoneseul" src="images/phoneseul.png"></a>
+				<a href="http://www.instagimg.com/user/freudpassion/198917665"><img id="instagramseul" src="images/instagramseul.png"></a>
+				<a href="https://fr-fr.facebook.com/aurelien.frois"><img id="facebookseul" src="images/facebookseul.png"></a>
+				
+			</div>
+
+</footer>
+ </div>
+<!--  fin du organite  -->  
+ <script src="js/wow.min.js"></script>
+</body>
+</html>
